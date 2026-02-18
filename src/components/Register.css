@@ -1,0 +1,69 @@
+
+.auth-container {
+  display: flex;
+  justify-content: center;   
+  margin-top: 40px;          
+  width: 100%;
+}
+
+/* Card */
+.auth-card {
+  width: 100%;
+  max-width: 450px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1f2a44;
+}
+
+/* Form */
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs */
+.auth-card input,
+.auth-card select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.auth-card input:focus,
+.auth-card select:focus {
+  outline: none;
+  border-color: #2c7be5;
+  box-shadow: 0 0 4px rgba(44, 123, 229, 0.3);
+}
+
+/* Button aligned right */
+.auth-card button {
+  align-self: flex-end;   
+  padding: 8px 18px;
+  font-weight: bold;
+  background-color: #e63946;  
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.auth-card button:hover {
+  background-color: #c82333;
+}
+
+/* Message */
+.auth-card p {
+  text-align: center;
+  margin-top: 10px;
+}

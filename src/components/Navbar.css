@@ -1,0 +1,121 @@
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 30px;
+  background: linear-gradient(90deg, #0f172a, #1e3a8a);
+  color: white;
+}
+
+/*BRAND */
+.nav-left .brand {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e0f2fe;
+}
+
+/* CENTER LINKS */
+.nav-center {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: #c7d2fe;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-center a:hover {
+  color: #38bdf8;
+}
+
+/* RIGHT SIDE  */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Username */
+.username {
+  margin-right: 15px;
+  font-size: 14px;
+  color: #a5f3fc;
+}
+
+/* Logout button */
+.logout-btn {
+  padding: 8px 16px;
+  background-color: #22c55e;
+  color: #022c22;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #16a34a;
+}
+
+
+
+/* Hidden on desktop */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #c7d2fe;
+}
+
+/*  MOBILE RESPONSIVE  */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 20px;
+  }
+
+  /* Left section (Brand + Hamburger) */
+  .nav-left {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide center links initially */
+  .nav-center {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+    display: none;
+  }
+
+  /* Show when active */
+  .nav-center.active {
+    display: flex;
+  }
+
+  /* Right section */
+  .nav-right {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .logout-btn {
+    width: 100%;
+  }
+}

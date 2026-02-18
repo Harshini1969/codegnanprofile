@@ -1,0 +1,88 @@
+/* Container for full page */
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Inner card */
+.home-card {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 1000px;
+  text-align: center;
+}
+
+/* Titles */
+.home-card h1 {
+  margin-bottom: 20px;
+  color: #1e3c72;
+}
+
+.home-card h3 {
+  margin-bottom: 10px;
+  color: #2a5298;
+}
+
+/* Paragraphs */
+.home-card p {
+  margin-bottom: 15px;
+  color: #555;
+  font-size: 16px;
+}
+
+/* Divider */
+.home-card hr {
+  margin: 20px 0;
+}
+
+/* List */
+.home-card ul {
+  list-style: none;
+  padding: 0;
+  color: #444;
+  line-height: 1.8;
+}
+
+/* Courses grid */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Individual course card */
+.course-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.course-card h4 {
+  margin: 10px 0;
+  color: #1e3c72;
+}
+
+.course-card span {
+  font-weight: bold;
+}
+
+.course-card p {
+  color: #555;
+  font-size: 14px;
+}
+
+.course-card a {
+  color: #d6336c;
+  text-decoration: none;
+}
