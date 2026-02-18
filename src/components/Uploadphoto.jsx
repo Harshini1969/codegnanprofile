@@ -1,11 +1,11 @@
 import axios from "axios";
-import React, { useState } from "react";
+import  { useState } from "react";
 import "./uploadphoto.css";
 
 function UploadPhoto() {
   const [file, setFile] = useState(null);
   const [message, setMessage] = useState("");
-  const [preview, setPreview] = useState(null); 
+  const [preview, setPreview] = useState(null);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -15,17 +15,23 @@ function UploadPhoto() {
       return;
     }
 
+    const token = localStorage.getItem("token"); 
+    if (!token) {
+      alert("Please login first");
+      return;
+    }
+
     const formData = new FormData();
     formData.append("uploadphoto", file);
 
     try {
       const res = await axios.post(
-        "https://backenddata-4.onrender.com/upload/photo-upload", 
+        "https://backenddata-4.onrender.com/upload/photo-upload",
         formData,
         {
-          withCredentials: true, 
           headers: {
             "Content-Type": "multipart/form-data",
+            Authorization: `Bearer ${token}`, // ✅ send JWT in header
           },
         }
       );
@@ -40,7 +46,6 @@ function UploadPhoto() {
     }
   }
 
-  
   function handleFileChange(e) {
     const selectedFile = e.target.files[0];
     setFile(selectedFile);
@@ -61,7 +66,7 @@ function UploadPhoto() {
           <input
             type="file"
             accept="image/*"
-            onChange={handleFileChange} 
+            onChange={handleFileChange}
           />
           <button type="submit">Upload</button>
         </form>
