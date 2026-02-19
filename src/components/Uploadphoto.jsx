@@ -26,17 +26,18 @@ function UploadPhoto() {
 
     try {
       const res = await axios.post(
-        "https://backenddata-4.onrender.com/upload/photo-upload",
+        "https://backenddata-02sd.onrender.comupload/photo-upload",
         formData,
         {
           headers: {
             "Content-Type": "multipart/form-data",
-            Authorization: `Bearer ${token}`, // ✅ send JWT in header
+            Authorization: `Bearer ${token}`, 
           },
         }
       );
 
       setMessage(res.data.message);
+      setPreview(res.data.file.url); 
       console.log(res.data);
     } catch (error) {
       console.error(error.response ? error.response.data : error.message);

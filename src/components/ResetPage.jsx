@@ -28,7 +28,7 @@ function ResetPage() {
 
     try {
       let res = await axios.post(
-        `https://backenddata-4.onrender.com/${role}/reset-password/${token}`, 
+        `https://backenddata-02sd.onrender.com/${role}/reset-password/${token}`, 
         { password }
       );
 

@@ -27,7 +27,7 @@ function Login() {
       setLoading(true);
 
       const res = await axios.post(
-        "https://backenddata-4.onrender.com/admin/login",
+        "https://backenddata-02sd.onrender.com/admin/login",
         { email, password },
         { withCredentials: true } 
       );
@@ -67,7 +67,9 @@ function Login() {
 
     try {
       const res = await axios.post(
-        "https://backenddata-4.onrender.com/student/forget-password",
+         "https://backenddata-02sd.onrender.com/student/forget-password",
+        // "http://localhost:5000/student/forget-password",
+
         { email },
         { withCredentials: true } 
       );

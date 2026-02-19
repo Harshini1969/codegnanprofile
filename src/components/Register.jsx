@@ -20,7 +20,7 @@ function Register() {
 
     axios
       .post(
-        `https://backenddata-4.onrender.com/admin/register`,
+        `https://backenddata-02sd.onrender.com/admin/register`,
         { name, email, password, role },
         { headers: { Authorization: `Bearer ${token}` } }
       )
